@@ -1,0 +1,12 @@
+<div v-repeat="row in message1" style="display:inline-block;">
+    <span v-show="$index+1<=current1">
+        <img v-src='images/zzxx_0{{$index+1}}1.png'/>&nbsp;
+         <b class="font16"><span >{{message1[$index]}}</span></b>
+    </span>
+    <span v-hide="$index+1<=current1">
+        <img v-src='images/zzxx_0{{$index+1}}.png'/>&nbsp;
+        <span>{{message1[$index]}}</span>
+    </span>
+</div>
+
+

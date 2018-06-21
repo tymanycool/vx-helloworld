@@ -1,0 +1,23 @@
+<div class="slider ng-scope" >
+	<div class="slider-delete" v-show="opt.operate">
+		-
+	</div>
+	<div class="slider-bar">
+		<div class="slider-selection" ></div><div class="slider-handle" ></div>
+	</div>
+	<div class="slider-title">
+		{{opt.title}}
+	</div>
+	<div class="slider-min">
+		 {{opt.minTitle}}{{opt.min}}
+	</div>
+	<div class="slider-input" v-bind="{{opt.setVModel}}">
+		
+	</div>
+	<div class="slider-max ">
+		 {{opt.maxTitle}} {{opt.max}}
+	</div>
+	<div class="slider-add" v-show="opt.operate">
+		+
+	</div>
+</div>

@@ -1,0 +1,16 @@
+<tfoot>
+  <tr>
+    <td colspan='7'><span style="float:left"> 当前第{{$eval(getPagerName())["currentPage"]}}页&nbsp;共{{$eval(getPagerName())["totalPage"]}}页&nbsp;{{$eval(getPagerName())["recordNumber"]}}条记录</span>
+    <div class="btn-page pull-right" >
+      <a class="btn topPage" v-click="topPage(getPagerName())"> <i class="fa fa-fast-backward"></i> 首页 </a>
+      <a class="btn prevPage" v-click="prevPage(getPagerName())"><i class="fa fa-backward"></i> 上一页 </a>
+      <a class="btn nextPage" v-click="nextPage(getPagerName())"> 下一页 <i class="fa fa-forward"></i> </a>
+      <a class="btn bottomPage" v-click="bottomPage(getPagerName())"> 尾页 <i class="fa fa-fast-forward"></i></a>&nbsp;跳转到
+      <select class="input-small" style="margin-bottom: 0px;width: auto" v-model="$eval(getPagerName())['goPageNo']" v-options="opt as opt for opt in $eval(getPagerName())['pageOptions']" v-change="goPage(getPagerName())">
+        <option value="">-选择-</option>
+      </select>
+      页
+    </div></td>
+  </tr>
+</tfoot>
+

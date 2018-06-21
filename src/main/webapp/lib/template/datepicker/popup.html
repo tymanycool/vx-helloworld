@@ -1,0 +1,10 @@
+<ul class="dropdown-menua menuDate " ng-style="{display: (isOpen && 'block') || 'none', top: position.top-5 +'px', left: position.left+'px'}" ng-keydown="keydown($event)" >
+	<li ng-transclude></li>
+	<li ng-if="showButtonBar" ng-style="{top: position.top+ 335 +'px', left: position.left+ 333 +'px'}" style="position: fixed;">
+		<!--<span class="btn-group dateleft">
+			<button type="button" class="btn btn-sm btn-info" ng-click="select('today')">{{ getText('current') }}</button>	
+		</span>-->
+		<button type="button" class="btn btn-sm btn-danger "  ng-click="select(null)">清空</button>
+		<button type="button" class="btn btn-sm btn-success "   ng-click="close()">关闭</button>
+	</li>
+</ul>
